@@ -1,0 +1,721 @@
+@font-face {
+  font-family: myFont;
+  src: url("../font/rabar.woff");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  font-family: myFont;
+  background-color: #F1F6F9;
+  scroll-behavior: smooth;
+}
+.text-navy {
+  color: #021526;
+}
+#display-body {
+  display: none;
+}
+/* -------------------- Custom Loader -------------------- */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.circle-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-svg {
+  transform: rotate(-90deg);
+}
+.circle-background,
+.circle-progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.circle-background {
+  stroke: #e0e0e0;
+}
+.circle-progress {
+  stroke: #021526;
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  transition: stroke-dashoffset 0.5s ease;
+}
+.percentage-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #021526;
+}
+/* -------------------- SITE-HEADER -------------------- */
+.site-header {
+  background-color: #030617;
+}
+/* -------------------- RIGHT-SIDE of Header Section -------------------- */
+.right-side a {
+  text-decoration: none;
+  color: #9db2bf;
+}
+.right-side a i {
+  font-size: 17px;
+}
+/* -------------------- LEFT-SIDE of Header Section -------------------- */
+.left-side {
+  margin-right: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+.left-side a {
+  text-decoration: none;
+  color: #9db2bf;
+}
+.left-side a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.right-side a:hover,
+.left-side a:hover {
+  color: #e8eefc;
+  transition: all 0.4s ease-in-out;
+}
+.left-side a:hover {
+  transform: scale(1.1);
+}
+/* -------------------- Rotate of caret down-icon -------------------- */
+.btn-logo-icon {
+  transition: transform 0.3s ease;
+}
+.btn-logo-icon.rotated {
+  transform: rotate(180deg);
+}
+.dropdown-toggle-icon {
+  transition: transform 0.3s ease;
+}
+.dropdown-toggle-icon.rotated {
+  transform: rotate(180deg);
+}
+.caret-down-symbol {
+  transition: transform 0.3s ease;
+}
+.caret-down-symbol.rotated {
+  transform: rotate(180deg);
+}
+/* -------------------- Navbar -------------------- */
+nav.navbar {
+  background-color: #e8eefc;
+}
+@media only screen and (max-width: 991px) { /* 991px and smaller */
+  nav.navbar {
+    background-color: #FFF;
+  }
+}
+.navbar img {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+}
+nav.navbar ul.dropdown-menu {
+  background-color: #FFF;
+}
+div.collapse ul li i {
+  font-size: 18px;
+}
+@media (max-width: 991px) {
+  .dropdown-toggle-icon {
+    margin-right: auto;
+  }
+}
+
+/* -------------------- Navbar Menue Toggler -------------------- */
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.toggler-icon:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 2px;
+  background-color: #030617;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.top-bar {
+  width: 52%;
+  transform: translate(-100%, 50px);
+}
+.middle-bar {
+  width: 100%;
+}
+.bottom-bar {
+  width: 52%;
+  right: 0;
+  left: auto;
+  transform: translate(0, 50px);
+}
+/* -------------------- When menu is clicked -------------------- */
+.navbar-toggler .top-bar {
+  transform: translate(80%, -4.19px) rotate(-45deg);
+}
+.navbar-toggler .middle-bar {
+  transform: rotate(45deg);
+}
+.navbar-toggler .bottom-bar {
+  transform: translate(-80%, 4.1px) rotate(-45deg);
+}
+/* -------------------- State the navbar is collapsed -------------------- */
+.navbar-toggler.collapsed .top-bar {
+  margin-top: -8px;
+  transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar {
+  margin-top: 0px;
+  transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .bottom-bar {
+  margin-top: 8px;
+  transform: rotate(0deg);
+}
+/* -------------------- Icons display in small sizes - My Accounts -------------------- */
+.right-side-sm button.btn-call {
+  margin-top: 17px;
+  margin-right: 2px;
+  background-color: #FFF;
+  border: 1px solid #c6c1d0;
+  border-radius: 7px;
+  color: #6482AD;
+  padding: 6px 10px;
+}
+.right-side-sm ul.dropdown-menu {
+  background-color: #FFF;
+}
+.right-side-sm ul.dropdown-menu li a {
+  text-decoration: none;
+  color: #030617;
+  text-align: right !important;
+}
+.left-side-sm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 14.5px;
+  margin-right: auto;
+  justify-content: flex-end;
+}
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 1px solid #c6c1d0;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.icon-circle i {
+  color: #6482AD;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+/* -------------------- carousel image -------------------- */
+.carousel {
+  direction: ltr;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+.carousel-slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 210px;
+}
+@media screen and (max-width: 768px) {
+  .carousel-slide {
+    height: 250px;
+  }
+}
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade-in 2s forwards;
+  transition: transform 1s ease-in-out;
+}
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.counter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.carousel-controls {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 7px;
+}
+@media only screen and (max-width: 250px) { /*250px or smaller*/
+  .carousel-controls {
+    display: block;
+  }
+  .carousel-controls button {
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 160px) { /*160px or smaller*/
+  .carousel-controls {
+    margin-bottom: 40px;
+  }
+}
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.carousel-controls button img {
+  width: 24px;
+  height: 24px;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 12px 12px;
+  border-radius: 5px;
+  display: flex;
+  gap: 7px;
+  width: fit-content;
+  margin: 0;
+}
+.carousel-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.carousel-indicators .indicator.active {
+  opacity: 1;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.carousel-overlay h4,
+.carousel-overlay p {
+  margin: 0;
+  animation: fade-in 4s forwards;
+  transition: transform 1s ease-in-out;
+}
+/* -------------------- Accordion -------------------- */
+.accordion-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #021526;
+}
+.a-b-after::after {
+  margin-left: 10px;
+  margin-right: auto;
+}
+.accordion-body {
+  background-color: #F1F6F9;
+}
+/* -------------------- Wrapper Animation -------------------- */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  direction: ltr;
+}
+.scroll {
+  position: relative;
+  display: flex;
+  width: 95%;
+  overflow: hidden;
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    #fff 5%,
+    #fff 95%,
+    transparent
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    #fff 5%,
+    #fff 95%,
+    transparent
+  );
+}
+.scroll div {
+  white-space: nowrap;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: animate var(--t) linear infinite;
+  animation-delay: calc(var(--t) * -1);
+}
+@keyframes animate {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.scroll div:nth-child(2) {
+  animation: animate2 var(--t) linear infinite;
+  animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.scroll div span {
+  display: inline-flex;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin: 0.625rem;
+  background: #fff;
+  color: #021526;
+  padding: 10px 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  backface-visibility: hidden; 
+}
+.scroll div span:hover {
+  background: #030617;
+  color: #FFFFFF;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .scroll div span {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin: 0.625rem;
+  }
+}
+
+/* -------------------- About ME -------------------- */
+.about {
+  background-color: #FFFFFF;
+}
+.clickable-image {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.clickable-image.enlarged {
+  transform: scale(1.1);
+}
+.div-about-text {
+  width: 70%;
+  margin: 0 auto;
+}
+.about-text {
+  text-align: justify;
+  hyphens: auto;
+  margin: 0 auto;
+  text-align-last: center;
+}
+/* -------------------- Services -------------------- */
+.contact {
+  background-color: #FFFFFF;  
+}
+.services-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.services-text::before,
+.services-text::after {
+  content: "";
+  flex: 1;
+  min-width: 20px;
+  height: 0.1px;
+  background-color: #030617;
+  margin: 0 10px;
+}
+
+@media (max-width: 480px) {
+  .services-text::before,
+  .services-text::after {
+    height: 0.1px;
+    min-width: 10px;
+    margin: 0 5px;
+  }
+}
+
+.cardSlide {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardOneDescreption,
+.cardTwoDescreption,
+.cardThreeDescreption {
+  border-radius: 0 0 5px 5px;
+  display: none;
+  margin-top: 1px;
+  background-color: #fff;
+  padding: 5px;
+  padding-top: 20px;
+}
+/* -------------------- Conatct -------------------- */
+.request {
+  text-decoration: none;
+  cursor: pointer;
+}
+.number {
+  text-decoration: none;
+}
+.down-symbols {
+  font-size: 24px;
+  color: #030617;
+}
+.request-icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.request-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #c6c1d0;
+  border-radius: 50%;
+  background-color: #FFF;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.request-icon a i {
+  color: #6482AD;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+.request-icon a:hover, 
+.request-icon a:active {
+  background-color: #ddd;
+  transform: scale(1.1);
+  color: #5e5eda;
+}
+.request-icon a:hover i {
+  transform: scale(1.1);
+}
+@media (max-width: 991px) {
+  .request-icon a:hover {
+    background-color: initial;
+    transform: none;
+    color: inherit;
+  }
+}
+textarea {
+  resize: none;
+}
+@media only screen and (max-width: 247px) { /* 247px and smaller */
+  .btn-s-r {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* -------------------- Form submiting Notification -------------------- */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  padding-bottom: 40px;
+  width: 84%;
+  z-index: 1000;
+  display: none;
+}
+.popup-content {
+  text-align: center;
+}
+.icon {
+  font-size: 44px;
+  color: #41b06e;
+}
+.message {
+  font-size: 16px;
+}
+.show {
+  display: block;
+}
+/* -------------------- Footer -------------------- */
+footer {
+  background-color: #030617;
+  color: #9db2bf;
+}
+.footer-left-side {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.footer-left-side a {
+  text-decoration: none;
+  color: #9db2bf;
+}
+.footer-left-side a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.footer-left-side a:hover {
+  color: #e8eefc;
+  transition: all 0.4s ease-in-out;
+}
+.footer-left-side a:hover {
+  transform: scale(1.1);
+}
+.owner {
+  text-decoration: none;
+  margin: 0 4px;
+  color: #7695ff;
+  font-size: 13.4px;
+}
+.scroll-to-top {
+  cursor: pointer;
+}
+/* -------------------- Scroll-to-top-Animation -------------------- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.7s ease-out forwards;
+}
+/* -------------------- Course Page -------------------- */
+.course-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.card-body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}

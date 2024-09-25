@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello, I am a developer and innovator in creating static and dynamic websites,  my goal is to use modern technologies to solve problems.">
+    <meta name="keywords" content="Information Technology, IT, Programming, Programmer, Developer, Website, Application, Portfolio, CSS, JavaScript, PHP, Python, Jquery, Ruby, Bootstrap, Tailwind, React, Dart, Flutter">
+    <meta name="author" content="Kovan Salam">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Kovan Salam</title>
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+<body>
+
+<!-- -------------------- Custom Loader -------------------- -->
+<div id="loader" class="loader">
+  <div class="circle-container">
+    <svg class="circle-svg" width="120" height="120" viewBox="0 0 120 120">
+      <circle class="circle-background" cx="60" cy="60" r="54" stroke="#e0e0e0" stroke-width="5" fill="none"/>
+      <circle class="circle-progress" cx="60" cy="60" r="54" stroke="#3498db" stroke-width="5" fill="none" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+    </svg>
+    <div class="percentage-container">
+      <div id="percentage" class="percentage">0%</div>
+    </div>
+  </div>
+</div>
+
+<!-- -------------------- Link Loading javascript -------------------- -->
+<script src="assets/js/loading.js"></script>
+
+<!-- -------------------- Link Animation javascript -------------------- -->
+<script src="assets/js/animation.js"></script>
+
+<!-- -------------------- Link Roate-caret-down javascript -------------------- -->
+<script src="assets/js/rotate-symbol.js"></script>
+
+<div id="display-body">
+
+<!-- -------------------- Header Encompasses my accounts and calls -------------------- -->
+<header class="site-header py-2 d-none d-lg-block">
+  <div class="container-xl d-flex">
+    <section class="right-side mt-1">
+      <a href="tel: 07503003837">3837 300 750 964+ <i class="fa-solid fa-phone"></i></a>
+      <a href="mailto: kovansalamkrd@gmail.com" class="me-3">kovansalamkrd@gmail.com <i class="fa-regular fa-envelope"></i></a>
+    </section>
+    <section class="left-side mt-1">
+      <a href="https://www.linkedin.com/in/kovan-salam-601429329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/9647503003837?text=سلاڤ بەرێز" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.snapchat.com/add/kovankrd">
+        <i class="fa-brands fa-snapchat"></i>
+      </a>
+      <a href="https://www.instagram.com/kovankrd/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </section>
+  </div>
+</header>
+
+<!-- -------------------- Navbar -------------------- -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-xl">
+    <a href="https://www.instagram.com/kovankrd/" target="_blank" class="navbar-brand fw-bolder m-auto order-lg-last"><span style="color: #6482AD;">&#60;&#47;</span><span class="text-navy">Kovan</span><span style="color: #6482AD;">&#62;</span></a>
+    <!-- My Image Icon -->
+    <div class="dropdown">
+      <button class="btn border-0 p-0" type="button" id="btn-logo" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="d-flex align-items-center">
+          <svg class="ms-1 d-none d-lg-block btn-logo-icon" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#000000"/>
+          </svg>
+        <img src="assets/images/kovan.jpg" class="rounded-circle" alt="logo">
+        <div class="manager me-2 d-none d-lg-block">
+          <p class="small mb-0 text-end text-navy" data-translate="myName">کوڤان سەلام</p>
+          <p class="small text-muted mb-0 text-end"><small data-translate="myWork">پڕۆگراممەر</small></p>
+        </div>
+        </div>
+      </button>
+        <ul class="dropdown-menu text-end mt-3">
+          <li>
+            <a class="dropdown-item" href="https://www.snapchat.com/add/kovankrd">
+              <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#FFEB00"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-snapchat ms-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.882 7.842a4.882 4.882 0 0 0 -9.764 0c0 4.273 -.213 6.409 -4.118 8.118c2 .882 2 .882 3 3c3 0 4 2 6 2s3 -2 6 -2c1 -2.118 1 -2.118 3 -3c-3.906 -1.709 -4.118 -3.845 -4.118 -8.118zm-13.882 8.119c4 -2.118 4 -4.118 1 -7.118m17 7.118c-4 -2.118 -4 -4.118 -1 -7.118" /></svg>
+              <span class="text-navy" data-translate="snapchat"> سناپچات</span>
+            </a>
+        </li>
+          <li>
+            <a class="dropdown-item" href="https://www.instagram.com/kovankrd/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#874CCC"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram ms-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
+              <span class="text-navy" data-translate="instagram">ئینستاگرام</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <!-- Menu Button -->
+    <button class="navbar-toggler collapsed order-first me-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler-icon top-bar"></span>
+      <span class="toggler-icon middle-bar"></span>
+      <span class="toggler-icon bottom-bar"></span>
+    </button>
+    <!-- Navbar Items -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-1 pe-0 pe-lg-4 ms-lg-4 mt-1 mt-lg-0">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link"><svg class="mb-1" style="color: #030617;" xmlns="http://www.w3.org/2000/svg"  width="27"  height="27"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.707 2.293l9 9c.63 .63 .184 1.707 -.707 1.707h-1v6a3 3 0 0 1 -3 3h-1v-7a3 3 0 0 0 -2.824 -2.995l-.176 -.005h-2a3 3 0 0 0 -3 3v7h-1a3 3 0 0 1 -3 -3v-6h-1c-.89 0 -1.337 -1.077 -.707 -1.707l9 -9a1 1 0 0 1 1.414 0m.293 11.707a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883 -.993l.117 -.007z" /></svg><span class="mx-1" data-translate="home"> دەستپێک</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-id" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M9 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 8l2 0" /><path d="M15 12l2 0" /><path d="M7 16l10 0" /></svg><span class="mx-1" data-translate="about"> دەربارە</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code-circle-2" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.5 13.5l-1.5 -1.5l1.5 -1.5" /><path d="M15.5 10.5l1.5 1.5l-1.5 1.5" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M13 9.5l-2 5.5" /></svg><span class="mx-1" data-translate="services"> خزمەتگوزاری</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-2-share" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M12 21l-3 -3h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v6" /><path d="M16 22l5 -5" /><path d="M21 21.5v-4.5h-4.5" /></svg><span class="mx-1" data-translate="contact"> پەیوەندی</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="course.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" /><path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" /><path d="M6 9l12 0" /><path d="M6 12l3 0" /><path d="M6 15l2 0" /></svg><span class="mx-1" data-translate="course"> کورس</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link d-flex align-items-center" role="button" id="main-dropdown" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
+            <span class="mx-1" data-translate="languages">زمان</span>
+            <span class="dropdown-toggle-icon ms-2"><i class="fa-solid fa-caret-down" style="color: #030617;"></i></span>
+          </a>
+          <ul class="dropdown-menu languages" id="main-ul">
+            <li><button id="main-item-1" data-lang="en" class="dropdown-item"><img src="assets/images/en.png" alt="English"><span class="mx-1">En</span></button></li>
+            <li><button id="main-item-2" data-lang="ar" class="dropdown-item"><img src="assets/images/ar.png" alt="Arabic"><span class="mx-1">Ar</span></button></li>
+            <li>
+              <a id="btn" class="dropdown-item d-flex align-items-center" data-bs-toggle="dropdown">
+                <img src="assets/images/ku.png" alt="kurdish">
+                <span class="mx-1">Ku</span>
+                <span class="caret-down-symbol me-auto"><i class="fa-solid fa-caret-down" style="color: #030617;"></i></span>
+              </a>
+              <ul class="dropdown-menu languages mx-2 mx-lg-0">
+                <li><button id="submenu-item-1" class="dropdown-item" data-translate="badini" data-lang="ku">بادینی</button></li>
+                <li><hr class="dropdown-divider my-lg-1"></li>
+                <li><button id="submenu-item-2" class="dropdown-item" data-translate="sorani" data-lang="ko">سوڕانی</button></li>
+              </ul>
+            </li>
+            <!-- -------------------- Link Hide-Menu Javascript -------------------- -->
+            <script src="assets/js/hide-menu.js"></script>
+          </ul>
+        </li>
+    </div>
+  </div>
+</nav>
+
+<!-- -------------------- Icons Display in Small Sizes -------------------- -->
+<div class="container-xl d-flex d-lg-none py-1">
+  <section class="right-side-sm">
+    <div class="dropdown">
+      <button class="btn-call slide-up" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6482AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-headset"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 14v-3a8 8 0 1 1 16 0v3" /><path d="M18 19c0 1.657 -2.686 3 -6 3" /><path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z" /><path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z" /></svg>
+        <span class="me-1" data-translate="call"> پەیوەندی</span>
+      </button>
+      <ul class="dropdown-menu text-end">
+        <li class="d-flex align-items-center mt-2">
+          <a href="tel: 07503003837" class="d-flex align-items-center">
+            <span class="me-2 text-navy">3837 300 750 964+</span> 
+            <i class="fa-solid fa-phone" style="color: #6482AD;font-size: 17px;"></i>
+          </a>
+        </li>
+        <li class="d-flex align-items-center my-2 ms-2">
+          <a href="mailto: kovansalamkrd@gmail.com" class="d-flex align-items-center">
+            <span class="me-2 text-navy">kovansalamkrd@gmail.com</span> 
+            <i class="fa-regular fa-envelope me-1" style="color: #6482AD; font-size: 19px; margin-bottom: 2px;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="left-side-sm mt-3 slide-up">
+    <a href="https://www.linkedin.com/in/kovan-salam-601429329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon-circle" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://wa.me/9647503003837?text=سلاڤ بەرێز" class="icon-circle" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://www.snapchat.com/add/kovankrd" class="icon-circle">
+      <i class="fa-brands fa-snapchat"></i>
+    </a>
+    <a href="https://www.instagram.com/kovankrd/" class="icon-circle" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </section>
+</div>
+
+<!-- -------------------- Carousel -------------------- -->
+<div class="container-xl mt-3">
+  <div class="carousel shadow slide-up">
+    <!-- Slide 1 -->
+    <div class="carousel-slide">
+        <img src="assets/images/prototype.jpg" class="img-fluid"  alt="First slide">
+      <div class="carousel-overlay">
+        <h4 data-translate="carousel-ui-ux-title">دیزاین UI/UX</h4>
+        <p class="small pt-2" data-translate="carousel-ui-ux-text">دروستکرنا دیزاینێن بالکێش ب باشترین شێواز کو د ئاسان بن بو بکارئینان و لێگەریانێ د نافدا ژ لایێ بکارهێنەران ڤە</p>
+      </div>
+      <div class="counter" id="counter">01 / 03</div>
+    </div>
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <img src="assets/images/web-development.jpg" class="img-fluid"  alt="Second slide">
+      <div class="carousel-overlay">
+        <h4 data-translate="carousel-web-title">وێب دیڤیلوپمێنت</h4>
+        <p class="small pt-2" data-translate="carousel-web-text">دروستکرنا مالپەرێن ستاتیک و داینامیک، کو ڕەنگڤەدانا بڕاندا تە بکەن ب دیزاین و شێوازێن سەرنج ڕاکێش، ب شێوازەکی کو خو د گونجینن دگەل هەمی جورێن ئامیران</p>
+      </div>
+      <div class="counter" id="counter">02 / 03</div>
+    </div>
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <img src="assets/images/menu.png" class="img-fluid" alt="Third slide">
+      <div class="carousel-overlay">
+        <h4 data-translate="carousel-menu-title">مینیو</h4>
+        <p class="small pt-2" data-translate="carousel-menu-text">دروستکرنا مینیویان، کو رێکێ ب کڕیاران ددەت بشێوازەکێ بلەز و ئاسان لدیف بەرهەم و خزمەتگوزاریێن هەوەدا بگەریێن و بهایێن وان بزانن</p>
+      </div>
+      <div class="counter" id="counter">03 / 03</div>
+    </div>
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <span class="indicator active" data-index="0"></span>
+      <span class="indicator" data-index="1"></span>
+      <span class="indicator" data-index="2"></span>
+    </div>
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="prev"><img src="assets/images/previous.png" alt="Previous"></button>
+      <button class="toggle"><img src="assets/images/pause.png" alt="Pause/Play"></button>
+      <button class="next"><img src="assets/images/next.png" alt="Next"></button>
+    </div>
+  </div>
+</div>
+<!-- ------------------- Link Carousel javascript ------------------- -->
+<script src="assets/js/carousel.js"></script>
+
+<div class="font-size-body">
+
+<!-- -------------------- Accordion and animation Section -------------------- -->
+<div class="container-xl mt-3 mt-md-1 mb-5" id="accordion-rtl">
+  <div class="row slide-up">
+    <!-- -------------------- Col One Accordion -------------------- -->
+    <div class="col-12 col-md-6">
+      <h4 class="text-center fw-bolder mb-3 mt-3 text-navy" data-translate="expertise">کارامایی</h4>
+      <hr class="m-auto mb-3 mb-md-2">
+    <div class="accordion shadow" id="myAccordion">
+    <!--  First Accordion Item  -->
+      <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button a-b-after collapsed text-end" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-translate="accordion-one-title">
+          #1 گەشەپێدەرێ ڕۆکارێ مالپەران
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+        <div class="accordion-body">
+          <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%; background-color: #dd6808;"><span class="mt-1">HTML <i class="fa-brands fa-html5"></i></span></div>
+          </div>
+          <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-prinary" style="width: 90%"><span class="mt-1">CSS <i class="fa-brands fa-css3"></i></span></div>
+          </div>
+          <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%; background-color: purple;"><span class="mt-1">BOOTSTRAP <i class="fa-brands fa-bootstrap"></i></span></div>
+          </div>
+          <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 70%"><span class="mt-1">JAVASCRIPT <i class="fa-brands fa-js"></i></span></div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 80%"><span class="mt-1">JQUERY <i class="fa-solid fa-code"></i></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Second Accordion Item  -->
+    <div class="accordion-item border-0 border-bottom">
+      <h2 class="accordion-header">
+        <button class="accordion-button a-b-after collapsed text-end" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-translate="accordion-two-title">
+          #2 گەشەپێدەرێ بەکگڕاوندێ مالپەران 
+        </button>
+      </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+          <div class="accordion-body">
+            <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"><span class="mt-1">PHP <i class="fa-brands fa-php"></i></span></div>
+            </div>
+            <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 70%"><span class="mt-1">LARAVEL <i class="fa-brands fa-laravel"></i></span></div>
+            </div>
+            <div class="progress mb-1" role="progressbar" aria-label="Animated striped" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 90%"><span class="mt-1">SQL <i class="fa-solid fa-database"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  Third Accordion Item  -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header">
+          <button class="accordion-button a-b-after collapsed text-end btn-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-translate="accordion-three-title">
+            #3 شاڕەزاییێن پێشکەفتی یێن کومپیوتەری
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+          <div class="accordion-body text-navy">
+            <p data-translate="accordion-one-text">1- بڕێڤەبرنا خزمەتگوزاریێن ئای تی</p>
+            <p data-translate="accordion-two-text">2- ئاسایشا ئەلکترونی</p>
+            <p data-translate="accordion-three-text">3- دروستکرن و بڕێڤەبرنا داتابەیسان</p>
+            <p data-translate="accordion-four-text">4- پروگڕامینگ</p>
+            <p data-translate="accordion-five-text">5- مایکروسوفت ئوفیس</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------------- Col Two Animation Wrapper -------------------- -->
+  <div class="col-12 col-md-6 mt-3 wrapper">
+    <!-- Row Number One -->
+    <div class="scroll mt-3 mt-md-0 slide-up" style="--t:41s">
+      <div>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS</span>
+        <span>FLUTTER</span>
+        <span>FIGMA</span>
+        <span>UI/UX</span>
+        <span>REACT</span>
+      </div>
+      <div>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS</span>
+        <span>FLUTTER</span>
+        <span>FIGMA</span>
+        <span>UI/UX</span>
+        <span>REACT</span>
+      </div>
+    </div>
+    <!-- Row Number Two -->
+    <div class="scroll" style="--t:45s">
+      <div>
+        <span>PHP</span>
+        <span>LARAVEL</span>
+        <span>UI/UX</span>
+        <span>BOOTSTRAP</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>PHOTOSHOP</span>
+      </div>
+      <div>
+        <span>PHP</span>
+        <span>LARAVEL</span>
+        <span>UI/UX</span>
+        <span>BOOTSTRAP</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>PHOTOSHOP</span>
+      </div>
+    </div>
+    <!-- Row  Number Three-->
+    <div class="scroll" style="--t:37s">
+      <div>
+        <span>TAILWIND</span>
+        <span>JQUERY</span>
+        <span>FLUTTER</span>
+        <span>DART</span>
+        <span>LIVEWIRE</span>
+        <span>HTML</span>
+        <span>UI/UX</span>
+      </div>
+      <div>
+        <span>TAILWIND</span>
+        <span>JQUERY</span>
+        <span>FLUTTER</span>
+        <span>DART</span>
+        <span>LIVEWIRE</span>
+        <span>HTML</span>
+        <span>UI/UX</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ------------------- About Me ------------------- -->
+<section id="about" class="about py-5">
+  <div class="text-center pb-md-5 slide-up">
+    <p class="small text-muted mb-1" data-translate="about-me-first">زێدەتر بزانە</p> 
+    <h4 class="fw-bolder text-navy" data-translate="about-me-second">دەربارەی من</h4>
+  </div>
+<div class="container-xl align-content-center">
+    <div class="row d-flex justify-content-center align-items-center text-center">
+      <div class="col-12 col-md-4 order-first order-md-last text-center my-5 slide-up">
+        <img src="assets/images/kovan.jpg" class="clickable-image img-fluid" id="myImage" alt="myImage">
+        <!-- ------------------- Link enlarged-img javascript ------------------- -->
+        <script src="assets/js/enlarged-img.js"></script>
+      </div>
+      <div class="col-12 col-md-8 mt-3 mt-md-0">
+        <div class="d-flex flex-wrap gap-3 justify-content-center text-center">
+          <div class="card slide-up"  style="width: 17.5rem; border: 1px solid #030617;">
+            <div class="card-body">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-code" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" /><path d="M20 21l2 -2l-2 -2" /><path d="M17 17l-2 2l2 2" /></svg>
+                <span class="card-title fw-bolder mt-1 text-navy" data-translate="about-expertise">کارامایی</span>
+              </div>
+              <p class="card-text small mt-1" data-translate="about-expertise-text">+2 سال فول-ستاک دیڤیلۆپەر</p>
+            </div>
+          </div>
+          <div class="card slide-up"  style="width: 17.5rem; border: 1px solid #030617;">
+            <div class="card-body">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate-2" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#030617" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M10 7h4" /><path d="M10 18v4l2 -1l2 1v-4" /><path d="M10 19h-2a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-2" /></svg>
+                <span class="card-title fw-bolder mt-1 text-navy" data-translate="about-education">خاندن</span>
+              </div>
+              <p class="card-text small mt-1" data-translate="about-education-text">بڕواناما دبلوم - تەکنەلۆژیا وێب</p>
+            </div>
+          </div>
+        </div>
+        <div class="div-about-text mt-4">
+          <h5 class="my-3 fw-bolder slide-up text-navy" data-translate="about-me-text">سلاڤ، بخێرهاتن!</h5>
+            <p class="about-text mb-4 slide-up" data-translate="about-me-subtext">ئەز گەشەپێدەر و داهێنەرم د دروستکرنا ماڵپەڕێن ستاتیک و داینامیک دا، بشێوازەکێ سادە و پێشکەفتی کو بکارهێنەر دشێن بشێوازەکێ ئاسان بکاربینن، ئارمانجا من بکارئینانا تەکنەلۆژیایێن سەردەمە بو چارەسەرکرنا کێشان، هەڕوەسا دەرچویێ ئێکێ مە لسەر بەشێ وێب تەکنەلۆژی.</p>
+            <a class="btn btn-outline-dark" href="assets/pdf/kovansalam.pdf" download="kovansalam"><i class="fa-solid fa-download"></i> download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------- Services ------------------- -->
+<section id="services" class="py-5">
+  <div class="container-xl">
+    <div class="services-text slide-up">
+      <h4 class="text-center fw-bolder text-navy" data-translate="xzmatgozary">خزمەتگوزاری</h4>
+    </div>
+  </div>
+  <div class="container-xl">
+    <div class="row slide-up">
+      <span class="text-center my-4"><img src="assets/images/services.svg" class="img-fluid" width="200px" height="200px" alt="services"></span>
+    </div> 
+    <div class="row pt-4 text-center justify-content-center pb-3">
+      <div class="col-12 col-md-4 mb-4 slide-up">
+        <div id="cardOne" class="cardSlide shadow">
+          <i class="fa-solid fa-money-bill-trend-up text-navy"></i>
+          <span class="text-navy" data-translate="digital-marketing-title"> بازاڕێن دیجیتالی </span>
+          <i class="fa fa-plus text-navy"></i>
+        </div>
+        <div class="cardOneDescreption shadow">
+          <p class="small text-secondary" data-translate="digital-marketing-text">ب بازاڕکرنا دیجیتالی کو دهێتە نیاسین ب بازاڕکرنا ئونڵاین، دشێین بەرهەم و خزمەتگوزاریێن تە پتر نیشان بدەین بو کڕیاران</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4 slide-up">
+        <div id="cardTwo" class="cardSlide shadow">
+          <i class="fa-solid fa-code text-navy"></i>
+          <span data-translate="web-development-title"> وێب دیڤیلوپمێنت </span>
+          <i class="fa fa-plus text-navy"></i>
+        </div>
+        <div class="cardTwoDescreption shadow">
+          <p class="small text-secondary" data-translate="web-development-text">دروستکرنا هەمی جورێن وێبسیتان <br> {بازرگانی، پورتفولیو، براندا، هتد..}</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4 slide-up">
+        <div id="cardThree" class="cardSlide shadow">
+          <i class="fa-solid fa-bell-concierge text-navy"></i>
+          <span class="text-navy" data-translate="menu-title"> مینیو </span>
+          <i class="fa fa-plus text-navy"></i>
+        </div>
+        <div class="cardThreeDescreption shadow">
+          <p class="small text-secondary" data-translate="menu-text">دروستکرنا مینیویان، کو رێکێ ب کڕیاران ددەت بشێوازەکێ بلەز و ئاسان لدیف بەرهەم و خزمەتگوزاریێن هەوەدا بگەریێن و بهایێن وان بزانن</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+</section>
+<!-- ------------------- Link Card-Slide Javascript ------------------- --> 
+<script src="assets/js/card-slide.js"></script>
+
+<!-- ------------------- Contact ------------------- -->
+<section id="contact" class="contact py-5">
+  <div class="container-xl">
+    <div class="text-center mb-5 slide-up">
+      <p class="small text-muted mb-1" data-translate="contact-first">نوکە تو دشێی</p> 
+      <h4 class="fw-bolder text-navy" data-translate="contact-second">پەیوەندیێ بمن بکەی</h4>
+    </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 align-content-center text-center">
+      <h5 class="slide-up text-navy" data-translate="project-mind-title">ئەگەر پڕوژەک د هزرا تەدا هەبیت</h5>
+      <p class="small text-muted slide-up" data-translate="project-mind-text">ئێکسەر بڕێکا <a href="#form" class="request">فورمێ</a> داخازبکە، یان پەیوەندیێ بمن بکە</p>
+      <p class="down-symbols text-navy slide-up">&#8595; &#8595; &#8595;</p>
+      <div class="slide-up"><a href="tel: 07503003837" class="number" style="color: #6482AD;font-size: 20px;"></a></div><br>
+    <section class="request-icon mt-3 slide-up">
+      <a href="https://www.linkedin.com/in/kovan-salam-601429329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/9647503003837?text=سلاڤ بەرێز" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.snapchat.com/add/kovankrd">
+        <i class="fa-brands fa-snapchat"></i>
+      </a>
+      <a href="https://www.instagram.com/kovankrd/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </section>
+    </div>
+    <div class="col-12 col-md-6 mt-5 mt-md-0">
+      <form action="https://formspree.io/f/mkgwajpk" method="POST" id="myForm" class="p-4 shadow rounded slide-up" autocomplete="off">
+        <!-- First Row -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3">
+              <input type="text" name="FIRST-NAME" id="firstName" class="form-control" placeholder="ناڤێ ئێکێ" data-translate="firstName">
+              <div id="firstNameError" class="form-text text-danger"></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mb-3">
+              <input type="text" name="LAST-NAME" id="lastName" class="form-control" placeholder="ناڤێ دووێ" data-translate="lastName">
+              <div id="lastNameError" class="form-text text-danger"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Second Row -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-3">
+              <input type="email" name="EMAIL" id="email" class="form-control" placeholder="ئی مەیل" data-translate="email">
+              <div id="emailError" class="form-text text-danger"></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="mb-3">
+              <input type="text" name="PHONE" id="phone" class="form-control" placeholder="ژمارا موبایلێ" data-translate="phone">
+              <div id="phoneError" class="form-text text-danger"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Third Row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="mb-3">
+              <textarea id="textArea" name="MESSAGE" class="form-control" rows="4" placeholder="داخازی..." data-translate="message"></textarea>
+              <div id="textAreaError" class="form-text text-danger"></div>
+            </div> 
+          </div>
+        </div>
+        <!-- Submit && Remove Buttons -->
+        <div class="row">
+          <div class="col-12 d-flex gap-3 btn-s-r">
+            <button type="reset" id="btnDelete" class="btn btn-danger w-50" data-translate="jebrn">ژێبرن</button>
+            <button type="submit" id="btnSubmit" class="btn btn-outline-dark w-50" data-translate="vrekrn">ڤڕێکرن</button>
+          </div>
+        </div>
+      </form>
+      <!-- Success Message Popup -->
+      <div id="successPopup" class="popup">
+        <div class="popup-content">
+          <span id="successIcon" class="icon"></span><br>
+          <span id="successMessage" class="message"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- ------------------- Link Validate-Form javascript ------------------- -->
+<script src="assets/js/validate-form.js"></script>
+
+<!-- ------------------- Footer ------------------- -->
+<footer>
+  <div class="container-xl p-4 pb-2">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-4 d-flex align-items-baseline">
+        <p class="small" data-translate="copyright">ماف پاراستیە بو </p><p><a href="https://www.snapchat.com/add/kovankrd" class="owner" data-translate="owner">کوڤان سەلام</a></p>
+      </div>
+      <div class="col-md-4 d-none d-md-block ">
+        <section class="footer-left-side">
+          <a href="https://www.linkedin.com/in/kovan-salam-601429329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/9647503003837?text=سلاڤ بەرێز" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.snapchat.com/add/kovankrd">
+            <i class="fa-brands fa-snapchat"></i>
+          </a>
+          <a href="https://www.instagram.com/kovankrd/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </section>
+      </div>
+      <div class="col-2 col-md-4 scroll-to-top">
+        <a id="scroll-to-top">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-bar-to-up" width="27" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9DB2BF" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 10l0 10" /><path d="M12 10l4 4" /><path d="M12 10l-4 4" /><path d="M4 4l16 0" /></svg>
+        </a>
+      </div>
+      <!-- ------------------- Link Arrow-Up Javavscript ------------------- -->
+      <script src="assets/js/arrow-up.js"></script>
+    </div>
+  </div>
+</footer>
+<!-- ------------------- Link Languages Javavscript ------------------- -->
+<script src="assets/js/lang.js"></script>
+<!-- Closed div display-body for custom loading -->
+</div>
+</div>
+</body>
+</html>
