@@ -540,8 +540,8 @@ div.collapse ul li i {
 @media (max-width: 480px) {
   .services-text::before,
   .services-text::after {
-    height: 0.1px;
-    min-width: 10px;
+    height: 1px;
+    min-width: 20px;
     margin: 0 5px;
   }
 }
