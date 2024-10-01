@@ -165,9 +165,55 @@ $(document).ready(function() {
 
     // Update error messages on language change
     function updateErrors() {
-        // Optionally, update error messages here if required
-    }
+        $('#firstNameError').text(function() {
+            var firstName = $('#firstName').val().trim();
+            if (firstName === "") {
+                return messages[selectedLanguage].firstNameRequired;
+            } else if (firstName.length < 3) {
+                return messages[selectedLanguage].firstNameMinLength;
+            }
+            return '';
+        });
 
+        $('#lastNameError').text(function() {
+            var lastName = $('#lastName').val().trim();
+            if (lastName === "") {
+                return messages[selectedLanguage].lastNameRequired;
+            } else if (lastName.length < 3) {
+                return messages[selectedLanguage].lastNameMinLength;
+            }
+            return '';
+        });
+
+        $('#emailError').text(function() {
+            var email = $('#email').val().trim();
+            if (email === "") {
+                return messages[selectedLanguage].emailRequired;
+            } else if (!isValidEmail(email)) {
+                return messages[selectedLanguage].emailInvalid;
+            }
+            return '';
+        });
+
+        $('#phoneError').text(function() {
+            var phone = $('#phone').val().trim();
+            if (phone === "") {
+                return messages[selectedLanguage].phoneRequired;
+            } else if (phone.length < 7) {
+                return messages[selectedLanguage].phoneLength;
+            }
+            return '';
+        });
+
+        $('#textAreaError').text(function() {
+            var textArea = $('#textArea').val().trim();
+            if (textArea === "") {
+                return messages[selectedLanguage].textAreaRequired;
+            }
+            return '';
+        });
+    }
+    
     // Field-level validation on input
     $('#firstName, #lastName, #email, #phone, #textArea').on('input', function() {
         validateField($(this));
