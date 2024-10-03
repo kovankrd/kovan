@@ -66,18 +66,22 @@ $(document).ready(function() {
     }
 
     var selectedLanguage = localStorage.getItem('language') || 'ku';
+    let formSubmitted = false; // Track form submission
 
     // Language selection
     $('button[data-lang]').on('click', function() {
         selectedLanguage = $(this).data('lang');
         localStorage.setItem('language', selectedLanguage); // Save language selection
-        updateErrors(); // Update errors based on new language
+        if (formSubmitted) {
+            updateErrors(); // Only update errors if the form was submitted
+        }
     });
 
     // Form submission
     $('#myForm').on('submit', function(event) {
         event.preventDefault();
         validateForm();
+        formSubmitted = true;
     });
 
     // Clear form fields and errors
@@ -110,10 +114,13 @@ $(document).ready(function() {
         $('#emailError').text('');
         $('#phoneError').text('');
         $('#textAreaError').text('');
+
+        formSubmitted = false; // Reset the flag so that form is treated as not submitted
     }
 
     // Form validation
     function validateForm() {
+        
         var isValid = true;
 
         var firstName = $('#firstName').val().trim();
@@ -165,6 +172,9 @@ $(document).ready(function() {
 
     // Update error messages on language change
     function updateErrors() {
+
+        if (!formSubmitted) return; // Do not display errors if the form wasn't submitted
+
         $('#firstNameError').text(function() {
             var firstName = $('#firstName').val().trim();
             if (firstName === "") {
@@ -213,7 +223,7 @@ $(document).ready(function() {
             return '';
         });
     }
-    
+
     // Field-level validation on input
     $('#firstName, #lastName, #email, #phone, #textArea').on('input', function() {
         validateField($(this));
